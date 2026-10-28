@@ -1,0 +1,11 @@
+[package]
+name = "sigmaos-amanda"
+version = "0.1.0"
+edition = "2021"
+authors = ["SigmaOS Contributors"]
+description = "SigmaOS amanda component"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "sigmaos_amanda"
+path = "src/lib.rs"
