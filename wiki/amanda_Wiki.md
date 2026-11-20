@@ -1,64 +1,50 @@
-# SigmaOS-amanda Component Wiki
+# SigmaOS-SigmaOS-amanda Component Wiki
 
 ## Overview
-SigmaOS-amanda provides Amanda backup and disk array support for the SigmaOS operating system. It demonstrates the backup subsystem and disk array management within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic backup initialization.
+SigmaOS-SigmaOS-amanda provides GitHub description is a placeholder; component scope remains unclassified. for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Backup Abstraction
-- Fail-Fast on Backup Initialization Errors
-- Deterministic Backup Setup
-- Clear Abstraction Over Backup APIs
-- Composition over Inheritance for backup extensions
+- SigmaOS-amanda Abstraction
+- Fail-Fast on SigmaOS-amanda Initialization Errors
+- Deterministic SigmaOS-amanda Setup
+- Clear Abstraction Over SigmaOS-amanda APIs
+- Composition over Inheritance for SigmaOS-amanda extensions
 
 ## Architecture
-SigmaOS-amanda follows a backup pattern:
-- **Backup Core**: Provides backup management, disk array support, and backup scheduling
-- **Array Management**: Supports disk array creation, disk array configuration, and disk array monitoring
-- **Backup Scheduling**: Supports backup jobs, backup rotation, and backup retention policies
-- **Error Handling**: Fail-fast on invalid backup configurations or unsupported backup types
+SigmaOS-SigmaOS-amanda follows a SigmaOS-amanda pattern:
+- **SigmaOS-amanda Core**: Provides SigmaOS-amanda support, SigmaOS-amanda management, and SigmaOS-amanda tracking
+- **Management**: Supports SigmaOS-amanda management, SigmaOS-amanda configuration, and SigmaOS-amanda lifecycle
+- **Tracking**: Supports SigmaOS-amanda status, SigmaOS-amanda tracking, and SigmaOS-amanda lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-amanda configurations or unsupported SigmaOS-amanda types
 
 ## API
 The component provides the following public APIs:
-- `backup::array::create(name)` - Create a disk array by given name
-- `backup::schedule::add(backup)` - Add a backup job with given schedule
-- `backup::status::array()` - Get backup array status and backup jobs
-- `backup::retention::policy(policy)` - Set backup retention policy
-- Error types for backup failure scenarios or unsupported backup types
+-  - Manage a SigmaOS-amanda by given configuration
+-  - Register a SigmaOS-amanda by given name
+-  - Get SigmaOS-amanda status and SigmaOS-amanda availability
+-  - Track SigmaOS-amanda management and SigmaOS-amanda tracking
+- Error types for SigmaOS-amanda failure scenarios or unsupported SigmaOS-amanda types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific backup configuration
-2. **Act**: Execute the code under test (array creation, backup scheduling)
-3. **Assert**: Verify the expected backup results
+1. **Arrange**: Set up test environment with specific SigmaOS-amanda configuration
+2. **Act**: Execute the code under test (SigmaOS-amanda init, SigmaOS-amanda management)
+3. **Assert**: Verify the expected SigmaOS-amanda results
 
 Example:
-```rust
-#[test]
-fn test_backup_array_aaa() {
-    // Arrange
-    let array_name = "backup-array-1";
-    
-    // Act
-    let result = backup::array::create(array_name);
-    
-    // Assert
-    assert!(result.is_ok());
-    let created = result.unwrap();
-    assert!(created.is_valid());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Backup initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all backup failure scenarios
-- Unit tests provided for array creation and backup scheduling
-- Integration tests for full backup system with actual disk array integration
+- Follows Rust best practices with 
+- SigmaOS-amanda initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-amanda failure scenarios
+- Unit tests provided for SigmaOS-amanda management and configuration
+- Integration tests for full SigmaOS-amanda system with actual SigmaOS-amanda integration
 
 ## TODO
-- Add support for additional backup types (incremental, differential, full backup)
-- Expand array management capabilities (array resizing, array migration, array recovery)
-- Add scheduling features (backup frequency, backup rotation, backup notifications)
-- Create integration tests with actual disk array systems and backup integration
-- Implement backup persistence and array state management
+- Add support for additional SigmaOS-amanda types
+- Expand SigmaOS-amanda capabilities (SigmaOS-amanda features, SigmaOS-amanda configurations, SigmaOS-amanda tracking)
+- Add lifecycle features (SigmaOS-amanda tracking, SigmaOS-amanda lifecycle, SigmaOS-amanda propagation)
+- Create integration tests with actual SigmaOS-amanda systems and SigmaOS-amanda integration
+- Implement SigmaOS-amanda persistence and SigmaOS-amanda state management
